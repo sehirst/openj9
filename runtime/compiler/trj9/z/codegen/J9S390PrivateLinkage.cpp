@@ -3152,7 +3152,7 @@ TR::Register * TR::J9S390JNILinkage::buildDirectDispatch(TR::Node * callNode)
 
    targetAddress = (intptrj_t) resolvedMethod->startAddressForJNIMethod(comp());
    traceMsg(comp(), "target address: %x\n", targetAddress);
-   if (TR::SimpleRegex::getJniAccelerator())
+   if (TR::SimpleRegex->getJniAccelerator())
       {
       targetAddress--;
       traceMsg(comp(), "target address is off by one. Subtracting 1 from it to give a correct value of  %x\n", targetAddress);
