@@ -2228,7 +2228,7 @@ TR_ResolvedJ9Method::TR_ResolvedJ9Method(TR_OpaqueMethodBlock * aMethod, TR_Fron
              J9_FAST_JNI_NO_EXCEPTION_THROW |
              J9_FAST_JNI_NO_SPECIAL_TEAR_DOWN;
 
-             traceMsg(comp(), "Using fast JNI accelerator!\n");
+             //traceMsg(comp(), "Using fast JNI accelerator!\n");
          }
       }
    else
