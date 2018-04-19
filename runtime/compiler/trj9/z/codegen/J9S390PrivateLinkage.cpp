@@ -3151,6 +3151,7 @@ TR::Register * TR::J9S390JNILinkage::buildDirectDispatch(TR::Node * callNode)
    killMask = killAndAssignRegister(killMask, deps, &javaLitOffsetReg, TR::RealRegister::GPR11, codeGen, true);
 
    targetAddress = (intptrj_t) resolvedMethod->startAddressForJNIMethod(comp());
+   traceMsg(comp(), "target address: %x\n", targetAddress); 
    returnType = resolvedMethod->returnType();
 
    static char * disablePureFn = feGetEnv("TR_DISABLE_PURE_FUNC_RECOGNITION");
